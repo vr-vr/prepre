@@ -3,29 +3,32 @@
 \alias{prepre}
 \docType{package}
 \title{
-What the package does (short line)
-~~ package title ~~
+PREprocessing of Pupillary REsponse data
 }
 \description{
-More about what it does (maybe more than one line)
-~~ A concise (1-5 lines) description of the package ~~
+Functions for preprocessing of pupillary data, including blink detection, blink interpolation, baselining, etc. 
 }
 \details{
 \tabular{ll}{
 Package: \tab prepre\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
+Version: \tab 0.1\cr
 Date: \tab 2015-02-06\cr
-License: \tab What license is it under?\cr
+License: \tab GPL \cr
 }
-~~ An overview of how to use the package, including the most important ~~
-~~ functions ~~
+
+As the continuous sampling of the pupillary response results in large data sets, this package relies on the data.table package. All functions assume that pupillary data is stored in a data.table that contains the following columns:
+
+
+
+
 }
 \author{
-Who wrote it
+Hedderik van Rijn
+Jacolien van Rij
 
-Maintainer: Who to complain to <yourfault@somewhere.net>
-~~ The author and/or maintainer of the package ~~
+Maintainer: Please sent all comments to <vr-vr@van-rijn.org>
+
 }
 \references{
 ~~ Literature or other references for background information ~~
@@ -35,7 +38,7 @@ Maintainer: Who to complain to <yourfault@somewhere.net>
 \keyword{ package }
 \seealso{
 ~~ Optional links to other man pages, e.g. ~~
-~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
+\code{\link[<data.table>:<data.table>-package]{<data.table>}} ~~
 }
 \examples{
 ~~ simple examples of the most important functions ~~
