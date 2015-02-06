@@ -1,9 +1,9 @@
 Package: prepre
 Type: Package
-Title: What the package does (short line)
-Version: 1.0
+Title: PREprocessing of Pupillary REsponse data
+Version: 0.1
 Date: 2015-02-06
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Hedderik van Rijn & Jacolien van Rij
+Maintainer: Van Rijn & Van Rij <prepre@van-rijn.org>
+Description: Functions for the preprocessing of pupil dilation datasets.
+License: To be determined
