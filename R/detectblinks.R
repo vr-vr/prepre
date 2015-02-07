@@ -28,10 +28,12 @@
 
 require(data.table)
 
-detectblinks <- function(pddt,minDilation=500,maxDeltaDilation=5) {
+detectblinks <- function(pddt,minDilation=0,maxDeltaDilation=5) {
     
-    ## Reject blinks. Anything with a dilation below minDilation is considered a blink
-    pddt[Dil < minDilation, Dil := NA]
+    checkdata(pddt)
+    
+    ## Reject blinks. Anything with a dilation below or equal to minDilation is considered a blink
+    pddt[Dil <= minDilation, Dil := NA]
     
     ## However, some participants seem to "sometimes" partily close their eyes, resulting in "sudden drops"
     ## in dilatation. Therefore, add a velocity based measure as well.

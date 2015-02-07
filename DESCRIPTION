@@ -5,5 +5,11 @@ Version: 0.1
 Date: 2015-02-06
 Author: Hedderik van Rijn & Jacolien van Rij
 Maintainer: Van Rijn & Van Rij <prepre@van-rijn.org>
-Description: Functions for the preprocessing of pupil dilation datasets.
-License: To be determined
+Description: A set of functions useful for the preprocessing of pupillary
+    response data. Functionality includes blink detection, downsampling,
+    filtering & smoothing, and some analysis code. Package uses data.table
+    syntax extensively to speed up processing of the (potentially) huge data 
+    sets.
+License: LGPL
+Depends: data.table, zoo
+

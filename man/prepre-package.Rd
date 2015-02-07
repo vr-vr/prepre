@@ -31,15 +31,17 @@ Maintainer: Please sent all comments to <vr-vr@van-rijn.org>
 
 }
 \references{
-~~ Literature or other references for background information ~~
+NEEDS TO BE UPDATES
 }
-~~ Optionally other standard keywords, one per line, from file KEYWORDS in ~~
-~~ the R documentation directory ~~
 \keyword{ package }
 \seealso{
-~~ Optional links to other man pages, e.g. ~~
-\code{\link[<data.table>:<data.table>-package]{<data.table>}} ~~
+\code{\link[data.table:data.table-package]{data.table}} ~~
 }
 \examples{
-~~ simple examples of the most important functions ~~
+## Load in a dataset collected with a SR Research 1000 eyetracker, EDF file parsed with EDF2R package.
+data(prepreDemo)
+
+## Ignore the event messages, and just work with the samples:
+dat <- as.data.table(prepreDemo$samples)
+
 }

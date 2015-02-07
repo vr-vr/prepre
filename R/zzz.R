@@ -1,4 +1,7 @@
 .onLoad <- function(libname, pkgname){
-    cat("PREPRE - PREprocessing of Pupillary REsponse data\n")
-    cat("Version: ",as.character(packageVersion("prepre")),"\n")
+}
+
+.onAttach <- function(libname, pkgname) {
+    packageStartupMessage("prepre - PREprocessing of Pupillary REsponse data\n\n",
+                          "Version: ",prepreInfo(FALSE),"\n\n")
 }
