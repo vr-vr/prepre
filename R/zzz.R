@@ -1,3 +1,5 @@
+prepreEnv <- new.env()
+
 .onLoad <- function(libname, pkgname){
 }
 
