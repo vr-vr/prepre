@@ -30,7 +30,22 @@ plotBlink <-function(pddt,blink,expand,cutoff=NA) {
     startVal <- r$index[which(r$nblink==blink)-1]-rejRegion
     endVal <- r$index[which(r$nblink==blink)]+rejRegion
     
-    pddt[startVal:endVal,plot(Time,Dil,pch=".",axes=FALSE,type="l",xlab="Time Stamp (in ms)",ylab="Dilation")]
+    blinkDat <- pddt[startVal:endVal,]
+    
+    blinkDat[,
+         plot(Time,Dil,axes=FALSE,type="l",col="black",xlab="Time Stamp (in ms)",ylab="Dilation")
+         ]
+    ## Plot the parts in a blink in red:
+    saccades <- blinkDat[,rle(InSaccade)]
+    saccades$index <- c(1,cumsum(saccades$lengths))
+    saccades$nblink <- ifelse(saccades$values==1,cumsum(saccades$values),0)
+    
+    for (i in 1:max(saccades$nblink)) {
+        saccadeStart <- saccades$index[which(saccades$nblink==i)]
+        saccadeEnd <- saccades$index[which(saccades$nblink==i)+1]
+        blinkDat[saccadeStart:saccadeEnd,lines(Time,Dil,col="red",lwd=2)]
+    }
+
     axis(1)
     axis(2)
     
@@ -39,3 +54,5 @@ plotBlink <-function(pddt,blink,expand,cutoff=NA) {
                r$index[which(r$nblink==blink)]+cutoff), abline(v=Time,lty=2,col="darkred")]
     }
 }
+
+
