@@ -31,7 +31,6 @@
 ##' @import data.table 
 
 prepare <- function(dvData, eye="autoselect") {
-    browser()
     if (!is.data.table(dvData)) {
         dat <- as.data.table(dvData)
     } else {
