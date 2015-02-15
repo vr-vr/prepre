@@ -10,8 +10,8 @@
 ##' @param cutoff Where to plot the visual indicators for the cutoff (if NA, no indicators will be plotted)
 ##' 
 ##' @author Hedderik van Rijn
-##' @name numBlinks
-##' @export numBlinks
+##' @name plotBlink
+##' @export plotBlink
 ##' @import data.table 
 
 
