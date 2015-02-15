@@ -10,7 +10,9 @@
 ##' @import shiny
 
 showBlinks <- function(pddt) {
+    ## Make sure that the shiny functions can access our data. There is probably a better way to do this, but for
+    ## now this will do. (Might be better to create a variable within the prepre scope. Need to look into this later.)
     showBlinksData <<- pddt
     shiny::runApp(system.file('showBlinks', package='prepre'))
-    rm(showBlinksData)
+    rm(showBlinksData,pos = ".GlobalEnv")
 }
